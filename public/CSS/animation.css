@@ -1,0 +1,48 @@
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rigth{
+    from{
+        opacity:.5;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes appers{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.animate-up{
+    animation-name: up;
+    animation-duration: 400ms;
+    animation-fill-mode: backwards; /*isso serve para que a animação/estado do obijeto pare na caracteristica dada pelo "to" no @keyframe*/
+}
+
+.animate-rigth{
+    animation-name: rigth;
+    animation-duration: 600ms;
+}
+
+.animate-appers{
+    animation-name: appers;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards;
+}

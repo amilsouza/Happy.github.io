@@ -1,0 +1,95 @@
+#page{
+    margin: 0;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(100deg, #20FC8F 0%, #198FF0 100%) no-repeat;
+}
+
+#container{
+    background: url("images/images/bg.vsg") no-repeat 80% / clamp(30rem, 30vh, 56rem);
+    margin: auto;
+    width: min(90%, 1020px); /*vai ativar o valor minimo (o menor valor entre esses dois)*/
+}
+
+h1, .location, .visit p{
+    height: 16vh;
+}
+
+.visit a{
+    align-items: center;
+    background: #ffd666;
+    border:none;
+    border-radius: 3rem;
+    display: flex;
+    justify-content:center;
+    height: 4rem;
+    width: 4rem;
+    margin: auto;
+    transition: background 800ms;
+}
+.visit a:hover{
+    background: #96feff;
+}
+
+.location{
+    animation-delay: 50ms;
+}
+
+main h1{
+    animation-delay: 100ms;
+}
+
+#visit p{
+    animation-delay: 150ms;
+}
+
+/*Desktop Version*/
+@media (min-width: 768px){
+    #container{ 
+        /*background: url() repetição position/size */
+        background: url("images/images/bg.vsg") no-repeat 80% / clamp(30rem, 30vh, 56rem);
+        padding: 3rem 2rem 0rem;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h1, .location, .visit p{
+        height: initial; /*inicial = valor que tinha antes das alterações CSS*/
+        text-align: initial;
+    }
+
+    .location{
+        text-align: right;
+      
+    }
+
+    main h1{
+        font-size: clamp(4rem, 8vw, 8.4rem);/*clamp (Valor mínimo, valor desejado, Valor máximo)*/
+        font-weight: bold;
+        width: min(300px, 80%);
+        line-height: .75;
+        margin: clamp(20px, 8vh, 50px) 0px 20px;
+    }
+
+    .visit{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+
+    .visit p{
+        line-height: 1.2;
+        width: clamp (20rem, 2vw, 30rem);
+        width: min(300px, 80%);
+    }
+
+    .visit a{
+        margin: initial;
+    }
+
+}

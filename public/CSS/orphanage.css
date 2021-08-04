@@ -1,0 +1,142 @@
+#page-orphanage{
+    display:flex;
+    min-height: 100vh;
+}
+
+
+/*details*/
+
+.orphanage-details{
+    width: 70rem;
+    margin:6.4rem auto;
+    background:white;
+    border: 2px solid #D3E2E5;
+
+    border-radius: 2rem;
+
+    overflow:hidden;
+}
+
+.orphanage-details > img{
+    width: 100%;
+    height:30rem;
+    object-fit: cover;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap:1.6rem;
+    margin:2% 4%;
+
+}
+
+.images button{
+    border:0;
+    background:none;
+
+    height:8.8rem;
+    cursor:pointer;
+    border-radius: 2rem;
+
+    overflow:hidden;
+
+    opacity:.8;
+
+    transition: opacity 200ms;
+}
+.images button:hover, 
+.images button.active{
+    opacity:1;
+    
+}
+
+.images button img{
+    width: 100%;
+    height:8.8rem;
+    object-fit:cover;
+
+}
+
+/*details-content*/
+
+.orphanage-details-content{
+    padding: 8rem;
+}
+
+.orphanage-details-content h1{
+    color:#4D6F80;
+    font-size:5.4rem;
+    line-height:1.5;
+    margin-bottom:0.8rem;
+}
+
+.orphanage-details-content p{
+    line-height:1.8;
+    color:#5C8599;
+    margin-top:2.4rem;
+    font-size: 2.0rem;
+}
+
+
+hr{
+    width: 100%;
+    height:1px;
+
+    border:0;
+
+    background:#d3e2e6;
+
+    margin:6.4rem 0px;
+}
+
+.orphanage-details-content h2{
+    font-size:3.6rem;
+    line-height:1.5rem;
+    color:#4d6f80;
+}
+
+/*open details*/
+
+.open-details{
+    margin-top:2.4rem;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:2rem;
+}
+
+.open-details div{
+    padding:3.2rem 2.4rem;
+}
+
+.open-details img{
+    display:block;
+    margin-bottom: 2rem;
+}
+
+.open-details .hour{
+    background:#e6fefb;
+    border:1px solid #b3dae2;
+    border-radius: 20px;
+    color:#4d6f80;
+    font-size: 1.5rem;
+}
+
+.open-details .open-on-weekends{
+    border-radius: 20px;
+    color:#6fe4a9;
+    font-size: 1.5rem;
+}
+
+.open-on-weekends.open{
+    background:#e6fefb;
+    border:1px solid #A1E9C5;
+    color:#30644a;
+}
+
+.open-on-weekends.closed{
+    background:#Fcf0f4;
+    border:1px solid #FFBCD4;
+    color:#f3686c;
+}

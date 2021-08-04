@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/images/logo-icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/animation.css">
+    <link rel="stylesheet" href="/CSS/orphanages-page.css">
+    <title>Localize um orfanato | Happy </title>
+  </head>
+  <body>
+    <div id="page-orphanages">
+      <aside class="animate-rigth">
+        <header>
+          <img src="images/images/logo-icon.png" alt="Logo do app">
+          <h2>Escolha um orfanato no mapa</h2>
+
+          <p>
+            Muitas crianças estão esperando a sua visita :)
+          </p>
+        </header>
+
+          <footer>
+            <strong>Salvador-Ba</strong>
+          </footer>
+
+      </aside>
+
+      <div id="mapid" class="animate-appers"></div>
+
+      <div class="orphanages">
+         {{#each orphanages}}
+
+          <span hidden
+          data-id="{{this.id}}"
+          data-name="{{this.name}}"
+          data-lat="{{this.lat}}"
+          data-lng="{{this.lng}}"
+          ></span>
+
+          {{/each}}
+      </div>
+     
+      <a href="/create-orphanage" class="create-orphanages" title="cadastre o seu orfanato" target="_blank">
+        <img src="images/images/plus.svg" alt="Criar o orfanato" >
+      </a>
+
+    </div>
+    <script src="/JS/orphanages.js"></script>
+  </body>
+</html>
